@@ -2,7 +2,7 @@
 using namespace std;
 long long solve(long long n,vector<long long> & nums,long long x){
     long long ans=0;
-    map<long long,long long> freq;
+    unordered_map<long long,long long> freq;
     vector<long long> prefix(n+1);
     prefix[0]=0;
     freq[prefix[0]]++;
