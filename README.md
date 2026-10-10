@@ -64,17 +64,6 @@ KEY DIFFERENCE BETWEEN BOTH APPROACHES
 
 The brute-force approach checks every possible subarray, which takes O(N^2) time and becomes too slow for large inputs. The optimized approach uses prefix sums and a hash map to count valid subarrays without checking each one individually. This reduces the expected time complexity to O(N), using O(N) additional space.
 
-SOURCE FILES
-
-Brute-force solution -> partB/subarray_sums_bruteforce.cpp
-
-Optimized solution -> partB/subarray_sums_optimized.cpp
-
-Both implementations use the same problem statement and input format. The optimized solution is the one that must receive an Accepted verdict on CSES.
-
-TIMING COMPARISON (BONUS)
-
-Run both implementations on random inputs of increasing sizes such as 10^3, 10^4 and 10^5 elements. Record the actual execution times and compare the results. The brute-force solution may be too slow for the largest input, which demonstrates why optimization is necessary.
 
 QUESTION 4 -> COUNTING ROOMS
 
