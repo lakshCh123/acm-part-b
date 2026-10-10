@@ -130,17 +130,9 @@ WHAT I THOUGHT ?
 
 We need to convert one string into another using insertions, deletions and replacements, while minimizing the number of operations.
 
-1) BRUTE FORCE
+BRUTE FORCE -> recursively try all three operations (insert, delete and replace) and choose the minimum number of operations. If the current characters are equal, move to the next characters in both strings. Otherwise, try all three operations and take the minimum result. This creates many repeated subproblems and has exponential time complexity, so it would give TLE. The recursion can take O(N+M) stack space in the worst case.
 
-recursively try all three operations (insert, delete and replace) and choose the minimum number of operations. If the current characters are equal, move to the next characters in both strings. Otherwise, try all three operations and take the minimum result. This creates many repeated subproblems and has exponential time complexity, so it would give TLE. The recursion can take O(N+M) stack space in the worst case.
-
-2) OPTIMIZATION
-
-use two-dimensional dynamic programming where dp[i][j] represents the minimum operations required to convert the first i characters of one string into the first j characters of the other string. If the current characters are equal, use dp[i-1][j-1]. Otherwise, take 1 + minimum of insertion, deletion and replacement.
-
-TIME COMPLEXITY -> O(N*M)
-
-SPACE COMPLEXITY -> O(N*M)
+OPTIMIZATION -> as currently completing dp i havent attempted the optimization for it
 
 QUESTION 8 -> DYNAMIC RANGE SUM QUERIES
 
@@ -148,24 +140,6 @@ WHAT I THOUGHT ?
 
 We need to answer sum queries on a range and also update the value at a particular index.
 
-1) BRUTE FORCE
+BRUTE FORCE -> for every sum query, traverse the whole range and calculate its sum. Each query can take O(N) time, and with many queries this would give TLE.
 
-for every sum query, traverse the whole range and calculate its sum. Each query can take O(N) time, and with many queries this would give TLE.
-
-2) OPTIMIZATION
-
-use a Fenwick tree (Binary Indexed Tree) to support point updates and range sum queries efficiently. A prefix sum can be calculated in O(log N), and the sum from l to r can be calculated as prefixSum(r) - prefixSum(l-1). Point updates also take O(log N).
-
-TIME COMPLEXITY -> O(log N) per update or query
-
-SPACE COMPLEXITY -> O(N)
-
-SUBMISSION NOTES
-
-Part A contains the eight specified CSES problems. Every solution submitted as solved should have an Accepted verdict on CSES.
-
-Part B contains the brute-force and optimized solutions for Subarray Sums II, together with the complexity comparison and the explanation of the key improvement.
-
-The repository is organized into partA and partB folders. The README documents the profile handle and the approach used for each problem.
-
-All solutions should be understood thoroughly, as the recruitment panel may ask for explanations and live modifications.
+as i havent studied fenwick tree yet i havent attempted the optimization
